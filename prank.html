@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body{
+  background-color: rgb(32,103,178);
+}
+
+:-webkit-full-screen {
+  background-color: rgb(32,103,178);
+}
+
+
+:-ms-fullscreen {
+  background-color: rgb(32,103,178);
+}
+
+
+:fullscreen {
+  background-color: rgb(32,103,178);
+}
+
+h2{
+  font-family:system-ui;
+  font-size:48px;
+  letter-spacing:0;
+  font-style:normal;
+  font-weight:300;
+  color: whitesmoke;
+  margin-bottom: 25px;
+}
+
+p{
+  font-family:system-ui;
+  font-size:15px;
+  letter-spacing:0;
+  font-style:normal;
+  font-weight:300;
+  color: rgb(255,255,255,0.9);
+}
+
+button{
+  background-color: rgb(77,167,221);
+  border-style: dotted;
+  border-spacing: 9px;
+  border-color: rgb(189,87,45);
+  color: rgb(255,255,255);
+}
+
+.box1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255,255,255);
+  width: auto;
+  max-width: 109px;
+  padding: 2px;
+}
+
+.box2{
+  background-color: rgb(77,167,221);  
+  padding: 3px;
+}
+
+.con{
+  margin-left: 99px;
+}
+
+.con2{
+  margin-top: 25px;
+  margin-left: 250px;
+}
+
+#bo{
+  display: none;
+}
+
+</style>
+<title>PRESS F11</title>
+</head>
+<body>
+
+<div class="con">
+<h2>Activate Windows</h2>
+<p>Go to Settings to activate Windows.</p>
+
+<div class="con2"><div class="box1"><div class="box2"><button onclick="openFullscreen()">Go to Settings</button></div></div></div>
+
+</div>
+
+
+<script>
+
+var elem = document.documentElement;
+function openFullscreen() {
+
+   if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { 
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { 
+    elem.msRequestFullscreen();
+  }
+}
+
+</script>
+
+</body>
+</html>
